@@ -21,7 +21,7 @@ namespace PatternArch.Api.Controllers
             var response = _user.GetUserDetail();
             return Ok(response);
         }
-        [HttpGet("{id}")]
+        [HttpGet("{Id}")]
         public IActionResult GetEmployeeById(int Id)
         {
             var response = _user.GetUserDetailId(Id);
@@ -46,7 +46,7 @@ namespace PatternArch.Api.Controllers
             }
             _user.UpdateUser(userdetails);
           
-            return Ok("Updated succfully");
+            return Ok("Updated successfully");
         }
 
         [HttpDelete("{id}")]
